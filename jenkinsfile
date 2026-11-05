@@ -11,14 +11,14 @@ pipeline{
         stage('Git_Repo_Checkout'){
             steps{
 
-                git branch: "${params.develop}", url: 'https://github.com/PRDevopsProjects/Jenkinsparameters.git'
+                git branch: "${params.Git_BranchName}", url: 'https://github.com/PRDevopsProjects/Jenkinsparameters.git'
 
             }
         }
 
         stage('Proj_Config'){
             steps{
-                echo "Git Branch_Name:${params.develop}",
+                echo "Git Branch_Name:${params.Git_BranchName}",
                 sh  'whoami'
                 sh 'pwd'
             }
