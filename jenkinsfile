@@ -18,7 +18,7 @@ pipeline{
 
         stage('Proj_Config'){
             steps{
-                echo "Git Branch_Name:$(params.develop)",
+                echo "Git Branch_Name:${params.develop}",
                 sh  'whoami'
                 sh 'pwd'
             }
